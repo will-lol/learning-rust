@@ -1,22 +1,13 @@
+use crate::shapes::{rectangle::Rectangle, circle::Circle, area::Area};
+
+mod shapes;
+
 fn main() {
-    let mut items: Vec<Item> = vec![Item::Custom(Custom {
-        age: 23, 
-        name: "will".into(),
-    })];
-    append(&mut items)
-}
+    let rect = Rectangle::default();
 
-fn append(items: &mut Vec<Item>) {
-    items.push(Item::String("hello fem".into()));
-}
+    let circ = Rectangle::default();
 
-struct Custom {
-    age: usize,
-    name: String,
-}
+    println!("{}", rect);
 
-enum Item {
-    Number(usize),
-    String(String),
-    Custom(Custom),
+    println!("{}", circ.area());
 }
